@@ -254,21 +254,6 @@ t_testDiff = function(x){
 diff_t_test = apply(diffDat, 2, t_testDiff)
 diff_t_test
 ```
-Test
-```{r}
-nsubj = 215; nsec  = 2; nprob = 6
-D = data.frame(
-    subjid   = rep( 1:nsubj, each=nsec*nprob ),
-    pretrain = rep( sample( c('a','b','c'), nsubj, replace=TRUE ), each=nsec*nprob ),
-    training = rep( sample( c('j','k'), nsubj, replace=TRUE ), each=nsec*nprob ),
-    study    = rep( sample( 1:6, nsubj, replace=TRUE ), each=nsec*nprob ),
-    section  = rep( rep( c( 'pretest', 'posttest' ), each=nprob ), nsubj ),
-    probtype = rep( c( 'v', 'w', 'x', 'y', 'z', 'z' ), nsec*nsubj ),
-    accuracy = sample( c( 0.0, 0.5, 1.0 ), nsubj * nsec * nprob, replace=TRUE ) )
-
-D
-describe(factor(D$subjid))
-```
 
 
 
