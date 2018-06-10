@@ -180,8 +180,23 @@ Do all of this five times one for each data set.
 Figure out how to use sapply with double brackets for doing what you have below but with five data sets.
 
 So first create a data frame with all five data sets
-```{r}
 
+1. Run a loop over the five data frames.
+2. If possible seperate the variables into cat and non cat and run descriptives on them
+```{r}
+datAnalysisAll = list(datAnalysis1 =datAnalysis1, datAnalysis2 = datAnalysis2, datAnalysis3 = datAnalysis3, datAnalysis4 = datAnalysis4, datAnalysis5 = datAnalysis5)
+head(datAnalysisAll)
+
+b.out = NULL
+se.out = NULL
+mean.sd.out = NULL
+a.out$imputations[[1]]
+datAnalysisAll[[]]
+
+for(i in 1:m) {
+  mean.sd.out = apply(datAnalysisAll[[i]], 2, mean)  
+}
+mean.sd.out
 
 datCatBinary = data.frame(NumericPackage, Gen, Hisp, Race, SexOrientation, RelStatus, Education, Employment)
 datCatBinary = apply(datCatBinary, 2, function(x){describe.factor(x)})
